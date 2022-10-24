@@ -10,6 +10,7 @@ public class Constants {
     public static final Double MIN_HB = 0.5D;
     public static final Double MAX_HB = 100D;
     public static final int MAX_AGE = 130;
+    public static final int MAX_INPUT_LEN = 100;
 
     public static final class FX {
         public static final String PRIMARY =  "primary";
@@ -29,8 +30,8 @@ public class Constants {
         public static final String EXPORT_001 = "Could not export data! Check for writing permissions.";
         public static final String IMPORT_001 = "Could not import data! Check reading permissions, data format, or if file is not empty.";
 
-        public static final String VALIDATION_001 = "First name must not be empty and must contain only alphanumeric characters!";
-        public static final String VALIDATION_002 = "Last name must not be empty and must contain only alphanumeric characters!";
+        public static final String VALIDATION_001 = "First name must not be empty and must contain less than 100 alphanumeric characters!";
+        public static final String VALIDATION_002 = "Last name must not be empty and must contain less than 100 alphanumeric characters!";
         public static final String VALIDATION_003 = "Birth date must be in format YYYY-MM-DD, in the past and not more than %d years ago!".formatted(MAX_AGE);
         public static final String VALIDATION_004 = "Sex must not be empty and must be male or female!";
         public static final String VALIDATION_005 = "Temperature must be a number, above %d and below %d!".formatted(MIN_TEMPERATURE, MAX_TEMPERATURE);

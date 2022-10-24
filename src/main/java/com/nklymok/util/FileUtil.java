@@ -11,7 +11,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.nklymok.constant.Constants.IMPORT_SPLIT_DELIM;
-import static com.nklymok.constant.Constants.SPLIT_DELIM;
 
 public class FileUtil {
 

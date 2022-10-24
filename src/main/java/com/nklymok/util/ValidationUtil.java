@@ -77,12 +77,14 @@ public class ValidationUtil {
     private static boolean validateLastName(PersonFormInput formInput) {
         String lastName = formInput.getLastName();
         return !lastName.isBlank() &&
+                lastName.length() < Constants.MAX_INPUT_LEN &&
                 Patterns.name.matcher(lastName).matches();
     }
 
     private static boolean validateFirstName(PersonFormInput formInput) {
         String firstName = formInput.getFirstName();
         return !firstName.isBlank() &&
+                firstName.length() < Constants.MAX_INPUT_LEN &&
                 Patterns.name.matcher(firstName).matches();
     }
 

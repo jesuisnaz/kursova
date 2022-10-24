@@ -12,8 +12,8 @@ public class PersonFormInput {
 
     public Person toPerson() {
         return Person.builder()
-                .firstName(firstName)
-                .lastName(lastName)
+                .firstName(firstName.trim())
+                .lastName(lastName.trim())
                 .sex(sex)
                 .temperature(Integer.parseInt(temperature))
                 .hemoglobinLevel(Double.parseDouble(hemoglobinLevel))
