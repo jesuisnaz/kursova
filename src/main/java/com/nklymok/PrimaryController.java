@@ -22,6 +22,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Controller for the GUI.
+ * Wires GUI components and their functions.
+ */
 public class PrimaryController {
 
     @FXML

@@ -1,5 +1,11 @@
 package com.nklymok.constant;
 
+/**
+ * This class provides constants used in the program.
+ * All values and literals are moved here to avoid so-called "Magic values".
+ * "Magic values" are values that appear in code and are not described properly,
+ *  which may cause confusion among developers.
+ */
 public class Constants {
 
     public static final String SPLIT_DELIM = "|";

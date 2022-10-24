@@ -1,11 +1,12 @@
 package com.nklymok.model;
 
 import java.time.LocalDate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static com.nklymok.constant.Constants.SPLIT_DELIM;
 
+/**
+ * The main model class that is created in the form.
+ */
 public class Person {
     private final String firstName;
     private final String lastName;
@@ -73,6 +74,10 @@ public class Person {
         return String.join(SPLIT_DELIM, firstName, lastName, birthDate.toString(), sex.toString(), temperature.toString(), hemoglobinLevel.toString());
     }
 
+    /**
+     * This class implements Builder pattern, one of the common 23 patterns defined by GoF.
+     * It is used to conveniently create an instance of a class step by step, even if class fields are final.
+     */
     public static class PersonBuilder {
         private String firstName;
         private String lastName;

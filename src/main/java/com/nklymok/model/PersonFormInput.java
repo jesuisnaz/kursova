@@ -2,14 +2,12 @@ package com.nklymok.model;
 
 import java.time.LocalDate;
 
-public class PersonFormInput {
-    private final String firstName;
-    private final String lastName;
-    private final LocalDate birthDate;
-    private final Sex sex;
-    private final String temperature;
-    private final String hemoglobinLevel;
-
+/**
+ * This record is used to get information from the form and validate it.
+ * Later this record is used to create an instance of Person.
+ */
+public record PersonFormInput(String firstName, String lastName, LocalDate birthDate, Sex sex, String temperature,
+                              String hemoglobinLevel) {
     public Person toPerson() {
         return Person.builder()
                 .firstName(firstName.trim())
@@ -19,39 +17,6 @@ public class PersonFormInput {
                 .hemoglobinLevel(Double.parseDouble(hemoglobinLevel))
                 .birthDate(birthDate)
                 .build();
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public Sex getSex() {
-        return sex;
-    }
-
-    public String getTemperature() {
-        return temperature;
-    }
-
-    public String getHemoglobinLevel() {
-        return hemoglobinLevel;
-    }
-
-    public PersonFormInput(String firstName, String lastName, LocalDate birthDate, Sex sex, String temperature, String hemoglobinLevel) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
-        this.sex = sex;
-        this.temperature = temperature;
-        this.hemoglobinLevel = hemoglobinLevel;
     }
 
     public static PersonFormInputBuilder builder() {
@@ -66,6 +31,10 @@ public class PersonFormInput {
         private String temperature;
         private String hemoglobinLevel;
 
+        /**
+         * This class implements Builder pattern, one of the common 23 patterns defined by GoF.
+         * It is used to conveniently create an instance of a class step by step, even if class fields are final.
+         */
         public PersonFormInput build() {
             return new PersonFormInput(firstName, lastName, birthDate, sex, temperature, hemoglobinLevel);
         }

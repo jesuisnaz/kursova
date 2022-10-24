@@ -3,6 +3,10 @@ package com.nklymok.alert;
 import com.nklymok.constant.Constants;
 import javafx.scene.control.Alert;
 
+/**
+ * AlertFactory is implementation of Factory Design pattern, one of the common 23 patterns defined by GoF.
+ * It is used to apply instance control for those instances that can be re-used to save memory.
+ */
 public class AlertFactory {
     private static Alert EXPORT_FAILED_ALERT = null;
     private static Alert EXPORT_SUCCESS_ALERT = null;

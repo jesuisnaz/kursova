@@ -35,7 +35,7 @@ public class ValidationUtil {
     }
 
     private static boolean validateHemoglobin(PersonFormInput formInput) {
-        String hemoglobinLevelStr = formInput.getHemoglobinLevel();
+        String hemoglobinLevelStr = formInput.hemoglobinLevel();
         if (!Objects.nonNull(hemoglobinLevelStr) ||
                 hemoglobinLevelStr.isBlank() ||
                 !Patterns.doubleValue.matcher(hemoglobinLevelStr).matches()) {
@@ -47,7 +47,7 @@ public class ValidationUtil {
     }
 
     private static boolean validateTemperature(PersonFormInput formInput) {
-        String temperatureStr = formInput.getTemperature();
+        String temperatureStr = formInput.temperature();
         if (!Objects.nonNull(temperatureStr) ||
                 temperatureStr.isBlank() ||
                 !Patterns.number.matcher(temperatureStr).matches()) {
@@ -59,12 +59,12 @@ public class ValidationUtil {
     }
 
     private static boolean validateSex(PersonFormInput formInput) {
-        Sex sex = formInput.getSex();
+        Sex sex = formInput.sex();
         return sex != null;
     }
 
     private static boolean validateBirthDate(PersonFormInput formInput) {
-        LocalDate birthDate = formInput.getBirthDate();
+        LocalDate birthDate = formInput.birthDate();
         if (birthDate == null) {
             return false;
         }
@@ -75,14 +75,14 @@ public class ValidationUtil {
     }
 
     private static boolean validateLastName(PersonFormInput formInput) {
-        String lastName = formInput.getLastName();
+        String lastName = formInput.lastName();
         return !lastName.isBlank() &&
                 lastName.length() < Constants.MAX_INPUT_LEN &&
                 Patterns.name.matcher(lastName).matches();
     }
 
     private static boolean validateFirstName(PersonFormInput formInput) {
-        String firstName = formInput.getFirstName();
+        String firstName = formInput.firstName();
         return !firstName.isBlank() &&
                 firstName.length() < Constants.MAX_INPUT_LEN &&
                 Patterns.name.matcher(firstName).matches();
