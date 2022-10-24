@@ -1,7 +1,9 @@
 .root {
+	-fx-word-wrap: break-word;
 	-fx-body-color : #F5F5F5;
 	-fx-outer-border : #cecece;
 }
+
 .button:focused, .toggle-button:focused,
 .split-menu-button:focused, .menu-button:focused,
 .number-button:focused,
@@ -14,12 +16,21 @@
 }
 
 .button,.menu-button,.toggle-button,.split-menu-button {
-	-fx-font-size: 14;
 	-fx-background-radius: 4;
 	-fx-border-radius: 4;
 	-fx-pref-height: 30;
 	-fx-min-width: 30;
+	-fx-font: 13px "Apple LiSung" bold;
+	-fx-font-size: 13;
+	-fx-text-alignment: center;
 }
+
+.button {
+	-fx-font: 13px "Apple LiSung" bold;
+	-fx-font-size: 13;
+	-fx-text-alignment: center;
+}
+
 .button,.menu-button,.split-menu-button,.toggle-button,.number-button {
 	-fx-background-insets: 0, 0, -1, 0;
 }
@@ -48,7 +59,8 @@
 .xs {
 	-fx-min-height: 22;
 	-fx-max-height: 22;
-	-fx-font-size: 10;
+	-fx-font: 13px "Apple LiSung" bold;
+	-fx-font-size: 13;
 }
 
 .primary .arrow,
