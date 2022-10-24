@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -18,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nklymok.PrimaryController">
+<BorderPane fx:id="root" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nklymok.PrimaryController">
     <center>
       <GridPane>
         <columnConstraints>
@@ -56,7 +57,7 @@
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtFirstName" prefHeight="26.0" prefWidth="130.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <TextField fx:id="txtFirstName" prefHeight="26.0" prefWidth="130.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" styleClass="first" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>
@@ -69,7 +70,7 @@
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtLastName" prefHeight="26.0" prefWidth="109.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <TextField fx:id="txtLastName" prefHeight="26.0" prefWidth="109.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>
@@ -82,7 +83,7 @@
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
             </Label>
-            <DatePicker fx:id="datePicker" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="163.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <DatePicker fx:id="datePicker" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="163.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>
@@ -95,7 +96,7 @@
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
             </Label>
-            <ComboBox fx:id="cbSex" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="MALE" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <ComboBox fx:id="cbSex" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="MALE" style="-fx-font: 13px &quot;Apple LiSung&quot;;" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>
@@ -108,7 +109,7 @@
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtTemperature" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <TextField fx:id="txtTemperature" style="-fx-font: 13px &quot;Apple LiSung&quot;;" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>
@@ -121,12 +122,12 @@
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
             </Label>
-            <TextField fx:id="txtHb" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <TextField fx:id="txtHb" style="-fx-font: 13px &quot;Apple LiSung&quot;;" styleClass="last" GridPane.columnIndex="2" GridPane.rowIndex="8">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>
             </TextField>
-            <Button fx:id="btnAddPerson" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createPerson" prefHeight="26.0" prefWidth="251.0" text="Add" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+            <Button fx:id="btnAddPerson" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createPerson" prefHeight="26.0" prefWidth="251.0" styleClass="primary" text="Add" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
                <GridPane.margin>
                   <Insets bottom="5.0" />
                </GridPane.margin>
@@ -145,9 +146,9 @@
                 <TableColumn fx:id="firstNameColumn" prefWidth="150.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="First name" />
                   <TableColumn fx:id="lastNameColumn" prefWidth="150.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Last name" />
                   <TableColumn fx:id="birthDateColumn" prefWidth="136.53341674804688" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Birth date" />
-                  <TableColumn fx:id="sexColumn" prefWidth="46.54010009765625" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Sex" />
-                  <TableColumn fx:id="temperatureColumn" prefWidth="82.53668212890625" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Temperature" />
-                  <TableColumn fx:id="hbColumn" minWidth="-1.0" prefWidth="63.5400390625" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Hb" />
+                  <TableColumn fx:id="sexColumn" prefWidth="76.12881469726562" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Sex" />
+                  <TableColumn fx:id="temperatureColumn" prefWidth="98.90704345703125" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Temperature" />
+                  <TableColumn fx:id="hbColumn" minWidth="-1.0" prefWidth="111.5" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Hb" />
               </columns>
                <GridPane.margin>
                   <Insets />
@@ -159,35 +160,51 @@
                </font></Label>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sortByTemperature" text="Sort by temperature" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
-                  <Insets right="5.0" />
+                  <Insets />
                </GridPane.margin>
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="first" />
+               </styleClass>
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#femalesWithHighHb" text="Females with high Hb" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets bottom="5.0" right="5.0" />
+                  <Insets />
                </GridPane.margin>
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="first" />
+               </styleClass>
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#youngestMalesWithNormalTemperatureAndHighHb" text="Youngest males with Normal temperature and high Hb" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets bottom="5.0" right="5.0" />
+                  <Insets />
                </GridPane.margin>
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="first" />
+               </styleClass>
             </Button>
             <Button mnemonicParsing="false" onAction="#olderThan40WithHighHbAndLowTemperature" text="Older than 40 with high Hb and low temperature" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="5" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets bottom="5.0" right="5.0" />
+                  <Insets />
                </GridPane.margin>
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="first" />
+               </styleClass>
             </Button>
             <Label style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Logs:" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
             <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#oldestFemalesWithRepeatedNameAndNormalLevelHb" text="Oldest females with repeated name and normal level of Hb" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.valignment="TOP">
@@ -197,6 +214,10 @@
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="last" />
+               </styleClass>
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#greetYoungerThan28WithNormalTemperature" text="Greet younger than 28 with normal temperature" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="TOP">
                <GridPane.margin>
@@ -205,6 +226,10 @@
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="last" />
+               </styleClass>
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reset" text="Reset" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="TOP">
                <GridPane.margin>
@@ -213,11 +238,19 @@
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="last" />
+               </styleClass>
             </Button>
             <Button alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clear" text="Clear" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
                <font>
                   <Font name="Apple LiSung Light" size="13.0" />
                </font>
+               <styleClass>
+                  <String fx:value="info" />
+                  <String fx:value="last" />
+               </styleClass>
             </Button>
          </children>
       </GridPane>
