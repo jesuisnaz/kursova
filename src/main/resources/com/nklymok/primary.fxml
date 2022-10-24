@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nklymok.PrimaryController">
+    <center>
+      <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.5" minWidth="10.0" prefWidth="132.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="214.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="46.1875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.89422607421875" minWidth="10.0" prefWidth="207.18740844726562" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.44943237304688" minWidth="10.0" prefWidth="210.81259155273438" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="17.0" minHeight="15.844188690185547" prefHeight="15.844188690185547" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="31.0" />
+          <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints valignment="TOP" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="395.73284912109375" minHeight="291.18841552734375" prefHeight="291.18841552734375" />
+            <RowConstraints maxHeight="138.81158447265625" minHeight="7.78607177734375" prefHeight="19.52069091796875" />
+            <RowConstraints maxHeight="161.21392822265625" minHeight="10.0" prefHeight="149.47930908203125" />
+        </rowConstraints>
+         <children>
+            <Label text="First name" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFirstName" prefHeight="26.0" prefWidth="130.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Last name" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLastName" prefHeight="26.0" prefWidth="109.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Birth date" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePicker" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="163.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <Label text="Sex" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cbSex" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="MALE" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label text="Temperature" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTemperature" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Hemoglobin level" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtHb" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="btnAddPerson" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createPerson" prefHeight="26.0" prefWidth="251.0" text="Add" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Label text="Add new person" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font></Label>
+            <TextArea fx:id="txtLogs" prefHeight="200.0" prefWidth="200.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="12" />
+            <TableView fx:id="personTable" style="-fx-font: 13px &quot;Apple LiSung&quot;;" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="10">
+              <columns>
+                <TableColumn fx:id="noColumn" prefWidth="50.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="#" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="150.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="First name" />
+                  <TableColumn fx:id="lastNameColumn" prefWidth="150.0" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Last name" />
+                  <TableColumn fx:id="birthDateColumn" prefWidth="136.53341674804688" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Birth date" />
+                  <TableColumn fx:id="sexColumn" prefWidth="46.54010009765625" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Sex" />
+                  <TableColumn fx:id="temperatureColumn" prefWidth="82.53668212890625" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Temperature" />
+                  <TableColumn fx:id="hbColumn" minWidth="-1.0" prefWidth="63.5400390625" style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Hb" />
+              </columns>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TableView>
+            <Label text="Sorting options" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font></Label>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sortByTemperature" text="Sort by temperature" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#femalesWithHighHb" text="Females with high Hb" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#youngestMalesWithNormalTemperatureAndHighHb" text="Youngest males with Normal temperature and high Hb" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#olderThan40WithHighHbAndLowTemperature" text="Older than 40 with high Hb and low temperature" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Label style="-fx-font: 13px &quot;Apple LiSung&quot;;" text="Logs:" GridPane.columnIndex="1" GridPane.columnSpan="7" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+            <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#oldestFemalesWithRepeatedNameAndNormalLevelHb" text="Oldest females with repeated name and normal level of Hb" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#greetYoungerThan28WithNormalTemperature" text="Greet younger than 28 with normal temperature" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reset" text="Reset" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clear" text="Clear" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Apple LiSung Light" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+    </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#importPeople" text="Import people" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportPeople" text="Export people" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
