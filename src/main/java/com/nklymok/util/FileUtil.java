@@ -12,6 +12,9 @@ import java.util.stream.Collectors;
 
 import static com.nklymok.constant.Constants.IMPORT_SPLIT_DELIM;
 
+/**
+ * This class is used to serialize/deserialize Person class into/from files.
+ */
 public class FileUtil {
 
     public static boolean serializePeople(List<Person> people, File outputFile) {

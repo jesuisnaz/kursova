@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * Selection queries used to implement the logic required by tasks 1-7.
+ */
 public class SelectionUtil {
 
     private static final Double NORMAL_HB_LOW_BOUND_MALE = 13.2D;

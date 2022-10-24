@@ -7,6 +7,9 @@ import javafx.collections.ObservableList;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * The class that provides counting sort logic by Person body temperature
+ */
 public class SortingUtil {
 
     public static ObservableList<Person> personCountingSort(ObservableList<Person> persons) {

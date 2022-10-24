@@ -12,6 +12,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+/**
+ * The class that validates user input.
+ */
 public class ValidationUtil {
     private static Map<Predicate<PersonFormInput>, FormValidationException> validationMap = new HashMap<>();
 
