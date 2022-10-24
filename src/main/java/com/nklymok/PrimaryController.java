@@ -144,7 +144,7 @@ public class PrimaryController {
     }
 
     private String congratulate(Person person) {
-        return String.format(Constants.LogTemplate.GREETING, person.getFirstName(), person.getLastName());
+        return String.format(Constants.LogTemplate.GREETING, person.getLastName());
     }
 
     @FXML

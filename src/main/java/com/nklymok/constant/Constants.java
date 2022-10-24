@@ -23,7 +23,7 @@ public class Constants {
     }
 
     public static final class LogTemplate {
-        public static final String GREETING = "Так тримати, %s %s!\n";
+        public static final String GREETING = "---%s--- Так триматись!\n";
     }
 
     public static final class Info {

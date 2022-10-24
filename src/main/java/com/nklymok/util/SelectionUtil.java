@@ -71,7 +71,7 @@ public class SelectionUtil {
                 .collect(Collectors.toCollection(FXCollections::observableArrayList));
         Optional<LocalDate> youngest = males.stream()
                 .map(Person::getBirthDate)
-                .min(LocalDate::compareTo);
+                .max(LocalDate::compareTo);
         if (youngest.isEmpty()) {
             return FXCollections.observableArrayList();
         }
