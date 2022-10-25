@@ -1,4 +1,4 @@
-package com.nklymok;
+package com.nklymok.controller;
 
 import com.nklymok.alert.AlertFactory;
 import com.nklymok.constant.Constants;
@@ -103,6 +103,7 @@ public class PrimaryController {
     private void reset() {
         personTable.getItems().clear();
         people.forEach(p -> personTable.getItems().add(p));
+        txtLogs.clear();
     }
 
     @FXML
